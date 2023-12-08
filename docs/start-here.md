@@ -2,7 +2,7 @@
 
 This repository contains examples to demonstrate how to measure carbon during the development process.
 
-## Related
+## Related ##related
 
 - **[How to contribute](../CONTRIBUTING.md)**
 - **[Our code of conduct](../CODE_OF_CONDUCT.md)**
