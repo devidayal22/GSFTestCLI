@@ -1,4 +1,4 @@
-# Demo of the Carbon CI Pipeline
+# Demo of the Carbon CI Pipeline #Demo # Demo
 
 **You can see a sample output of running a GitHub Action using Carbon CI Pipeline Tooling in a [Pull Request comment here](https://github.com/ava-innersource/greensoftware-demo/pull/20)**
 
