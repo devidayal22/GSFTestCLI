@@ -1,10 +1,6 @@
   name: Calculate Carbon
   
-  on:
-    pull_request:
-      branches:
-        - Dev
-      types: [opened, synchronize, reopened]
+  on: workflow_dispatch
         
   jobs:
     carbon-measure:
