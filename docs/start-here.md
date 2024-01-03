@@ -106,7 +106,7 @@ To execute those Pulumi commands successfully, there are some steps you need to 
 
 4. Generate the list of resources on selected stack and save it as a JSON file by executing `pulumi stack export --file stack.json`. This will save the data on the current directory as stack.json, you can choose any filename you want.
 
-5. Generate the preview of updates to do by executing `pulumi preview`. If you are using Linux on your runner, execute `pulumi preview -j | tee preview.json`. If you are using Windows, execute `pulumi preview -j > preview.json`. This will save the data on the current diretory as preview.json, you can choose any filename you want.
+5. Generate the preview of updates to do by executing `pulumi preview`. If you are using Linux on your runner, ute `pulumi preview -j | tee preview.json`. If you are using Windows, execute `pulumi preview -j > preview.json`. This will save the data on the current diretory as preview.json, you can choose any filename you want.
 
 6. Use this Gitub action and point it to the 2 JSON files the were generated.
 
