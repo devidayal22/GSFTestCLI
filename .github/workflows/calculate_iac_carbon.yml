@@ -15,7 +15,7 @@
               go env -w GO111MODULE=on
               go version && go env
         - id: carbon_output
-          uses: 'devidayal22/GSFTestCLI'
+          uses: $GITHUB_WORKSPACE/GSFTestCLI
           with:
             IACFile: $GITHUB_WORKSPACE/data/azuredeploy.json
             IACType: arm
