@@ -1,11 +1,7 @@
   name: Calculate Carbon
   
-  # on: workflow_dispatch
-   on:
-    pull_request:
-      branches:
-        - Dev
-      types: [opened, synchronize, reopened]      
+  on: workflow_dispatch
+        
   jobs:
     carbon-measure:
       runs-on: windows-latest
@@ -19,7 +15,7 @@
               go env -w GO111MODULE=on
               go version && go env
         - id: carbon_output
-          uses: devidayal22/GSFTestCLI
+          uses: devidayal22/GSFTestCLI@Dev
           with:
             IACFile: $GITHUB_WORKSPACE/data/azuredeploy.json
             IACType: arm
