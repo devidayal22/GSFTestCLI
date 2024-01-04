@@ -13,4 +13,4 @@ COPY . .
 # COPY --from=action-builder /actioncompile/carbon_measure .
 
 # Declare entrypoints and activation commands.
-ENTRYPOINT ["carbon_measure"]
+ENTRYPOINT ["./carbon_measure.go"]
