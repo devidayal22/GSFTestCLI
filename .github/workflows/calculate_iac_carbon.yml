@@ -15,26 +15,13 @@
               go env -w GO111MODULE=on
               go version && go env
         - id: carbon_output
-          uses: ./src/carbon-measure-action
+          uses: ./src/test
           with:
             IACFile: $GITHUB_WORKSPACE/data/azuredeploy.json
             IACType: arm
             CloudProvider: azure
             CARBON_RATE_PROVIDER: watttime
-          env:
-            ELECTRICITY_MAP_AUTH_TOKEN: ${{ secrets.ELECTRICITY_MAP_AUTH_TOKEN }}
-            WATT_TIME_USER: "devidayal"
-            WATT_TIME_PASS: "aarvi@1234"
           
-        - name: Create comment
-          uses: peter-evans/create-or-update-comment@v2
-          with:
-            issue-number: ${{ github.event.pull_request.number }}
-            body: |
-              pounds carbon equivalent per MWh = ${{ steps.carbon_output.outputs.grams_carbon_equivalent_per_kwh }}
-              pounds co2 emitted over 24h = ${{ steps.carbon_output.outputs.grams_emitted_over_24h }}
-            reactions: rocket
-        
         
     
 
