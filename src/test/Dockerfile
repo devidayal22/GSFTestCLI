@@ -13,4 +13,4 @@ RUN mkdir -p /client/build
 COPY --from=action-builder /actioncompile/carbon_measure .
 
 # Declare entrypoints and activation commands.
-ENTRYPOINT ["./carbon_measure.go"]
+ENTRYPOINT ["./carbon_measure"]
