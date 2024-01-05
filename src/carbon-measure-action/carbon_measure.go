@@ -4,10 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	pa "main/pkg/poweradapter"
 	iac "main/pkg/infraascode"
+	pa "main/pkg/poweradapter"
 	"os"
-	"strings"
 )
 
 func main() {
@@ -79,26 +78,26 @@ func readJSON(jsonPath string) []TypCloudResources {
 	return cloudLoc
 }
 
-func GetWattage(qry TypCloudResourceQuery) (watt int) {
-	cloudLoc := readJSON("references/resources.json")
-	for _, c := range cloudLoc {
-		if strings.ToLower(c.Cloud) == strings.ToLower(qry.Provider) {
+// func GetWattage(qry TypCloudResourceQuery) (watt int) {
+// 	cloudLoc := readJSON("references/resources.json")
+// 	for _, c := range cloudLoc {
+// 		if strings.ToLower(c.Cloud) == strings.ToLower(qry.Provider) {
 
-			for _, l := range c.Resouce {
-				if strings.ToLower(l.Type) == strings.ToLower(qry.Type) {
+// 			for _, l := range c.Resouce {
+// 				if strings.ToLower(l.Type) == strings.ToLower(qry.Type) {
 
-					for _, s := range l.Sizes {
-						if strings.ToLower(s.Name) == strings.ToLower(qry.SizeName) {
-							watt = s.Wattage
-						}
-					}
-				}
-			}
-		}
-	}
-	return
+// 					for _, s := range l.Sizes {
+// 						if strings.ToLower(s.Name) == strings.ToLower(qry.SizeName) {
+// 							watt = s.Wattage
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// 	return
 
-}
+// }
 
 type TypCloudResourceQuery struct {
 	Provider string
